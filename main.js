@@ -7,11 +7,9 @@ const textOutput = document.querySelector("#textOutput")
 
 let letterArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
-let text = "hello"
-
 const textInputArr = []
 const textOutputArr = []
-let outputArr = []
+const outputArr = []
 
 cypher.addEventListener('click', () => {
     let key = parseInt(inputKey.value)
@@ -19,19 +17,17 @@ cypher.addEventListener('click', () => {
 
 for(let i = 0; i < text.length; i++){
     textInputArr.push(text.charAt(i).toUpperCase())
-    console.log(textInputArr)
     textOutputArr.push(letterArray.indexOf(textInputArr[i]))
-    console.log(textOutputArr)
 }
 
 textOutputArr.map((item) => {
-    console.log(item)
     if(item + key > 25){
         item -= 26
     }
+    /* item + key = cipher */
     outputArr.push(letterArray[item + key])
-    console.log(outputArr)
     })
+    /* output */
     textOutput.innerHTML = outputArr.join("")
 })
 
@@ -39,20 +35,18 @@ decrypt.addEventListener('click', () => {
         let key = parseInt(inputKey.value)
         let text = textInput.value
     
-    for(let i = 0; i < text.length; i++){
+        for(let i = 0; i < text.length; i++){
         textInputArr.push(text.charAt(i).toUpperCase())
-        console.log(textInputArr)
         textOutputArr.push(letterArray.indexOf(textInputArr[i]))
-        console.log(textOutputArr)
     }
     
     textOutputArr.map((item) => {
-        console.log(item)
         if(item + key > 25){
             item -= 26
         }
+        /* item - key = decrypt */
         outputArr.push(letterArray[item - key])
-        console.log(outputArr)
         })
+        /* output */
         textOutput.innerHTML = outputArr.join("")
     })
