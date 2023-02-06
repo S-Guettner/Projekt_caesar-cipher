@@ -1,0 +1,10 @@
+#textInput{
+    display: block;
+}
+label{
+    display: block;
+}
+#inputKey{
+    display: block;
+    margin-bottom: 1rem;
+}

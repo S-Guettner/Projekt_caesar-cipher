@@ -11,7 +11,6 @@ let text = "hello"
 
 const textInputArr = []
 const textOutputArr = []
-/* let key = 3 */
 let outputArr = []
 
 cypher.addEventListener('click', () => {
@@ -21,7 +20,6 @@ cypher.addEventListener('click', () => {
 for(let i = 0; i < text.length; i++){
     textInputArr.push(text.charAt(i).toUpperCase())
     console.log(textInputArr)
-    /* console.log(letterArray.indexOf(textInputArr[i])) */
     textOutputArr.push(letterArray.indexOf(textInputArr[i]))
     console.log(textOutputArr)
 }
@@ -44,7 +42,6 @@ decrypt.addEventListener('click', () => {
     for(let i = 0; i < text.length; i++){
         textInputArr.push(text.charAt(i).toUpperCase())
         console.log(textInputArr)
-        /* console.log(letterArray.indexOf(textInputArr[i])) */
         textOutputArr.push(letterArray.indexOf(textInputArr[i]))
         console.log(textOutputArr)
     }
