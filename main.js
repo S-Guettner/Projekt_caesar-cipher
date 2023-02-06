@@ -41,8 +41,9 @@ decrypt.addEventListener('click', () => {
     }
     
     textOutputArr.map((item) => {
-        if(item + key > 25){
-            item -= 26
+        console.log(item + key)
+        if(item + key < 25){
+            item += 26
         }
         /* item - key = decrypt */
         outputArr.push(letterArray[item - key])
