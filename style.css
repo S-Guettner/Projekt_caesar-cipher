@@ -8,3 +8,10 @@ label{
     display: block;
     margin-bottom: 1rem;
 }
+
+#cipherMessage{
+    display: none;
+}
+#decryptMessage{
+    display: none;
+}

@@ -3,6 +3,8 @@ const inputKey = document.querySelector("#inputKey")
 const cypher = document.querySelector("#cypher")
 const decrypt = document.querySelector("#decrypt")
 const textOutput = document.querySelector("#textOutput")
+const cipherMessage = document.querySelector("#cipherMessage")
+const decryptMessage = document.querySelector("#decryptMessage")
 
 
 let letterArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
@@ -27,6 +29,7 @@ textOutputArr.map((item) => {
     /* item + key = cipher */
     outputArr.push(letterArray[item + key])
     })
+    cipherMessage.style.display="block"
     /* output */
     textOutput.innerHTML = outputArr.join("")
 })
@@ -41,13 +44,13 @@ decrypt.addEventListener('click', () => {
     }
     
     textOutputArr.map((item) => {
-        console.log(item - key)
         if(item - key < 0){
             item += 26
         }
         /* item - key = decrypt */
         outputArr.push(letterArray[item - key])
         })
+        decryptMessage.style.display="block"
         /* output */
         textOutput.innerHTML = outputArr.join("")
     })
